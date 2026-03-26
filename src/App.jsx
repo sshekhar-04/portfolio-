@@ -309,7 +309,7 @@ const About = () => {
   const [ref, vis] = useReveal();
   const stats = [
     { val: '2+', label: 'Open Source Orgs' },
-    { val: '3+', label: 'Projects Built' },
+    { val: '4+', label: 'Projects Built' },
     { val: '50+', label: 'API Endpoints' },
     { val: '2028', label: 'Graduation' },
   ];
@@ -361,12 +361,13 @@ const About = () => {
 
 // ─── SKILLS (exact resume categories) ──────────────────────────
 const skillCategories = [
-  { category: 'Programming Languages', items: ['Java (Advanced)', 'Rust (Proficient)', 'Bash/Shell Scripting'] },
+  { category: 'Programming Languages', items: ['Java (Advanced)', 'Python (Proficient)', 'Rust (Proficient)', 'Bash/Shell Scripting'] },
   { category: 'Backend & AI', items: ['Spring Boot', 'Spring AI', 'RESTful APIs', 'RAG Architecture', 'WebSockets (STOMP)', 'OOP', 'Data Structures & Algorithms'] },
-  { category: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Linux', 'Maven', 'Git', 'CI/CD Pipelines'] },
-  { category: 'Databases', items: ['PostgreSQL', 'MongoDB'] },
+  { category: 'Frontend & Desktop', items: ['React 18', 'TypeScript', 'Tauri (Rust)', 'xterm.js', 'Tailwind CSS', 'Vite'] },
+  { category: 'DevOps & Cloud', items: ['Docker', 'Docker Compose', 'Kubernetes', 'Linux', 'Maven', 'Git', 'CI/CD Pipelines'] },
+  { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'ChromaDB (Vector DB)'] },
   { category: 'Security & Cryptography', items: ['AES-256 GCM', 'SHA-256', 'Quantum Key Distribution (BB84)', 'Penetration Testing Fundamentals'] },
-  { category: 'AI & LLM Integration', items: ['Retrieval-Augmented Generation (RAG)', 'Embedding-based Similarity Search', 'OpenAI API', 'Gemini API'] },
+  { category: 'AI & LLM Integration', items: ['Retrieval-Augmented Generation (RAG)', 'Vision Analysis (GPT-4o)', 'Semantic Compression', 'Embedding-based Similarity Search', 'OpenAI API', 'Gemini API'] },
 ];
 
 const Skills = () => {
@@ -411,6 +412,16 @@ const Skills = () => {
 
 // ─── PROJECTS ──────────────────────────────────────────────────
 const projects = [
+  {
+    title: 'ARIA — Adaptive Realtime Intelligence Agent',
+    period: '2026', category: 'AI / Desktop',
+    desc: 'OS-level AI assistant combining a vision RAG pipeline, LLM-powered terminal executor with intent classification (READ/WRITE/DESTRUCTIVE), and rolling semantic memory. Screenshots are captured every 30s, described by GPT-4o, embedded into ChromaDB, and auto-compressed into session chunks. Git-aware context injection, offline wake word detection, and full shutdown memory control. Runs entirely on-device — no cloud storage, no persistent telemetry.',
+    tags: ['Java 17', 'Spring Boot', 'Spring AI', 'React 18', 'Tauri', 'Python', 'ChromaDB', 'MongoDB', 'OpenAI', 'RAG', 'WebSocket'],
+    live: 'https://aria.shreyansh.dev',
+    github: 'https://github.com/sshekhar-04/ARIA--Adaptive-Realtime-Intelligence-Agent.git',
+    classified: false,
+    notLive: true,
+  },
   {
     title: 'EventX — Full-Stack Event Booking Platform',
     period: '2026', category: 'Full-Stack / SaaS',
