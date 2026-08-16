@@ -1,55 +1,49 @@
 Shreyansh Shekhar Dwivedi
-Backend Developer  |  Java & Spring Boot
-Noida, Uttar Pradesh, India  |  shreyanshsd512gb@gmail.com  |  LinkedIn  |  GitHub
+Software Developer & Researcher
+Noida, UP, India | shreyanshsd512gb@gmail.com | linkedin.com/in/shreyanshshekhar-dwivedi | github.com/sshekhar-04 | codeforces.com/profile/ssd512gb | portfolio-azure-tauutqbeydmuq.vercel.app
+
 PROFESSIONAL SUMMARY
-B.Tech Computer Science (Data Science) student with strong expertise in backend engineering, AI-powered systems, and secure 
-distributed architectures. Proven open-source contributor to large-scale repositories including TensorFlow (Google) and Eclipse 
-Foundation. Experienced in building high-reliability RESTful APIs, implementing Retrieval-Augmented Generation (RAG) pipelines, 
-and integrating cloud-native DevOps workflows using Docker, Kubernetes, and CI/CD pipelines. Passionate about developing 
-scalable, production-grade software solutions.
+B.Tech CS (Data Science) student specializing in backend engineering, agentic AI systems, and quantum-inspired cryptography. Currently Software Intern at CapConnect+ and former Research Intern at IIT Bhilai (transmon qubit ML research). Proven open-source contributor to TensorFlow (Google), Eclipse Foundation, and OWASP. Skilled in Spring Boot microservices, RAG pipelines, Docker/Kubernetes, and secure distributed architectures.
+
 TECHNICAL SKILLS
-Programming Languages: Java (Advanced), Rust (Proficient), Bash/Shell Scripting
-Backend & AI: Spring Boot, Spring AI, RESTful APIs, RAG Architecture, WebSockets (STOMP), OOP, Data Structures & 
-Algorithms
-DevOps & Cloud: Docker, Kubernetes, Linux, Maven, Git, CI/CD Pipelines
-Databases: PostgreSQL, MongoDB
-Security & Cryptography: AES-256 GCM, SHA-256, Quantum Key Distribution (BB84 Simulation), Penetration Testing 
-Fundamentals
-AI & LLM Integration: Retrieval-Augmented Generation (RAG), Embedding-based Similarity Search, OpenAI API, Gemini API
+Languages: Java (Advanced), Rust, Python, Bash
+Backend & AI: Spring Boot, Spring AI, RESTful APIs, RAG, WebSockets (STOMP), DSA
+DevOps & Cloud: Docker, Kubernetes, Linux, Maven, Git, CI/CD
+Databases: PostgreSQL, MongoDB, ChromaDB
+Security / Crypto: AES-256-GCM, SHA-256, BB84 QKD Simulation, Penetration Testing
+LLM Integration: RAG Pipelines, Embedding Search, OpenAI API, Gemini API
+
+WORK EXPERIENCE
+Software Intern — CapConnect+ Aug 2026 – Present
+• Contributing to full-stack feature development and code quality initiatives as part of the engineering team, applying Java/Spring Boot and React expertise in a production environment.
+
+Research Intern — IIT Bhilai (Online Programs) Jun 2026 – Jul 2026
+• Researched transmon qubit architecture and quantum coherence using machine learning; built a full ML pipeline (Random Forest, XGBoost with SHAP, Graph Neural Network) to predict materials that improve qubit coherence.
+
+Independent Researcher — Quantum-Inspired Cryptography Nov 2025 – Aug 2026
+• Designed QI-KDF: a 6-stage deterministic key derivation function combining BigDecimal precision seeding with microsecond temporal entropy — achieving a 2^190.5 key space, zero modulo bias, and ~500K ops/s throughput.
+• Verified strict SHA-256 avalanche criterion (~50.1% flip rate) across 10K+ trials; roadmap targets SHA-3 migration, CRYSTALS-Kyber wrapping, QRNG integration, and RFC/NIST standardization submission.
+
+Open Source Contributor — TensorFlow (Google), Eclipse Foundation, OWASP Nov 2025 – Mar 2026
+• TensorFlow (Google): Resolved CI/CD 'run format check' pipeline failures; integrated Maven Spotless for automated style enforcement.
+• Eclipse Foundation (4diac IDE): 4 merged internationalization (i18n) PRs, reviewed by maintainer Alois Zoitl.
+• OWASP FinBot CTF: 3 merged PRs (#265–#267) fixing f-string interpolation bugs in audit trails, each with unit tests.
+
 PROJECTS
+ARIA — Adaptive Realtime Intelligence Agent Personal Project | 2025 – Present
+• Built an OS-level agentic AI with LLM-controlled terminal access and a READ/WRITE/DESTRUCTIVE intent classifier that gates every command pre-execution, preventing unrecoverable system mutations.
+• Spring Boot 3.x backend + Python/ChromaDB RAG sidecar for persistent memory; React/Tauri desktop UI with offline Porcupine wake-word detection; MongoDB audit trail — fully air-gapped capable.
+Stack: Java 21, Spring Boot 3.x, Python, ChromaDB, RAG, React, Tauri, MongoDB, Porcupine
+
 Multi-Modal RAG & AI Chat Service Jan 2026
-• Built a Retrieval-Augmented Generation (RAG) pipeline enabling context-aware querying over private datasets using 
-embedding-based similarity search, significantly reducing LLM hallucinations.
-• Engineered custom Spring @Configuration with @Qualifier annotations to manage multi-provider AI beans (Gemini & OpenAI), 
-enabling modular and scalable AI integrations.
-• Implemented secure credential management using environment variables ensuring production-ready deployment best 
-practices.
-• Designed RESTful API backend architecture supporting multiple LLM providers and scalable document retrieval.
-Tech Stack: Java 21, Spring Boot, Spring AI, REST, RAG, OpenAI API, Gemini API, Embedding Search
-Hybrid Quantum Key Distribution (QKD) Simulator API Nov 2025
-• Designed and implemented a RESTful API simulating the BB84 protocol for secure quantum key exchange, including QBER 
-(Quantum Bit Error Rate) validation and error correction mechanisms.
-• Derived ephemeral AES-256 GCM session keys from the quantum key exchange process for quantum-resistant symmetric 
-encryption.
-• Demonstrated end-to-end secure key lifecycle management including key generation, distribution, error correction, and 
-cryptographic protocol implementation.
-Tech Stack: Java 21, Spring Boot, REST, AES-256 GCM, SHA-256, BB84 Protocol
-OPEN SOURCE EXPERIENCE
-Open Source Contributor — TensorFlow (Google Open Source)
-• Resolved CI/CD 'run format check' pipeline failures, improving build reliability for a global multi-thousand contributor repository.
-• Automated code-style enforcement by integrating Maven Spotless plugin, ensuring consistent formatting standards across the 
-large-scale codebase.
-• Contributed to maintaining code quality and consistency in one of the world's most widely used machine learning frameworks.
-Open Source Contributor — Eclipse Foundation
-• Improved project infrastructure and developer tooling to enhance contributor onboarding and productivity.
-• Refactored test suites to improve maintainability, code coverage, and stability across multiple environments.
-• Resolved configuration issues to ensure seamless cross-environment integration and compatibility.
+• Built a RAG pipeline over private datasets using embedding-based similarity search to minimize hallucinations; engineered Spring @Configuration / @Qualifier multi-provider AI bean management (Gemini + OpenAI).
+Stack: Java 21, Spring Boot, Spring AI, OpenAI API, Gemini API, Embedding Search
+
 EDUCATION
-B.Tech — Computer Science Engineering (Data Science) Expected Graduation: 2028
-JSS Academy of Technical Education, Noida, Uttar Pradesh, India
-ACHIEVEMENTS & HIGHLIGHTS
-• Contributed to enterprise-scale open-source repositories including TensorFlow (Google) and Eclipse Foundation.
-• Built secure distributed backend systems applying advanced cryptography (AES-256 GCM, SHA-256, QKD simulation).
-• Designed AI-driven backend architectures integrating multiple LLM providers (OpenAI, Gemini) using RAG pipelines.
-• Strong foundation in system design, clean code principles, and scalable microservices architecture.
-• Actively solving Data Structures & Algorithms problems; strong interest in Cloud Native infrastructure and distributed systems.
+B.Tech — Computer Science Engineering (Data Science) | JSS Academy of Technical Education, Noida | Expected 2028 | CGPA: 7.31
+
+ACHIEVEMENTS
+• Merged contributions into TensorFlow (Google), Eclipse Foundation, and OWASP as a first-year undergraduate — spanning three enterprise-scale open-source ecosystems.
+• Authored original cryptography research (QI-KDF): 2^190.5 key space, zero modulo bias, ~500K ops/s — addressing a gap no existing RFC standard covers.
+• Designed and shipped ARIA, an OS-level agentic AI with intent-aware pre-execution guardrails, cited as a working proof-of-concept in a GSoC 2026 OWASP proposal.
+• Recognised with the GitHub Pull Shark badge for open-source contributions to TensorFlow Java.

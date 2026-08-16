@@ -1,8 +1,35 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Download, Menu, X, ChevronDown } from 'lucide-react';
+import {
+  Github,
+  Linkedin,
+  Mail,
+  ExternalLink,
+  Download,
+  Menu,
+  X,
+  ChevronDown,
+  ShieldCheck,
+  Cpu,
+  Layers,
+  Terminal,
+  GitPullRequest,
+  CheckCircle2,
+  Trophy,
+  Star,
+  ArrowUpRight,
+  Sparkles,
+  GitBranch,
+  Building2,
+  MapPin,
+  GraduationCap,
+  Briefcase,
+  Code2,
+  Atom,
+  Binary
+} from 'lucide-react';
 
 /* ================================================================
-   GHOST PROTOCOL — Cybersecurity Portfolio
+   GHOST PROTOCOL — Cybersecurity & Software Engineering Portfolio
    ================================================================ */
 
 // ─── INJECTED GLOBAL STYLES ────────────────────────────────────
@@ -127,11 +154,11 @@ const BootScreen = ({ onDone }) => {
   const [fade, setFade] = useState(false);
   const boot = [
     '[0.000] GHOST PROTOCOL v3.0 — Initializing',
-    '[0.142] Loading AES-256 encryption engine... OK',
+    '[0.142] Loading AES-256-GCM & QI-KDF engine... OK',
     '[0.387] Mounting /dev/portfolio... OK',
-    '[0.621] Verifying digital signature... VALID',
+    '[0.621] Verifying digital signatures (Google/Eclipse/OWASP)... VALID',
     '[0.834] Establishing encrypted tunnel... OK',
-    '[1.103] Loading threat intelligence DB... OK',
+    '[1.103] Loading transmon qubit ML models... OK',
     '[1.447] Scanning perimeter... CLEAR',
     '[1.892] System ready. Access GRANTED.',
   ];
@@ -221,7 +248,7 @@ const Navbar = ({ active }) => {
     window.addEventListener('scroll', h);
     return () => window.removeEventListener('scroll', h);
   }, []);
-  const links = ['home', 'about', 'skills', 'projects', 'experience', 'contact'];
+  const links = ['home', 'about', 'skills', 'projects', 'achievements', 'experience', 'contact'];
   return (
     <nav className={`fixed top-0 w-full z-[100] transition-all duration-300 ${scrolled ? 'bg-[#030712]/80 backdrop-blur-xl border-b border-[#00ff41]/10' : ''}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex justify-between items-center">
@@ -232,7 +259,7 @@ const Navbar = ({ active }) => {
           {links.map(l => (
             <a key={l} href={`#${l}`} className={`px-3 py-2 text-[10px] uppercase tracking-[0.2em] rounded transition-all ${active === l ? 'text-[#00ff41] bg-[#00ff41]/10' : 'text-slate-500 hover:text-[#00ff41]'}`}>{l}</a>
           ))}
-          <a href="/Shreyansh_S_Dwivedi_Resume_1.pdf" download className="ml-3 px-4 py-2 text-[10px] uppercase tracking-[0.2em] border border-[#00ff41]/30 text-[#00ff41] rounded hover:bg-[#00ff41]/10 transition-all flex items-center gap-1.5">
+          <a href="/Shreyansh_S_Dwivedi_Resume_v4.pdf" download className="ml-3 px-4 py-2 text-[10px] uppercase tracking-[0.2em] border border-[#00ff41]/30 text-[#00ff41] rounded hover:bg-[#00ff41]/10 transition-all flex items-center gap-1.5">
             <Download size={12} /> Resume
           </a>
         </div>
@@ -253,7 +280,14 @@ const Navbar = ({ active }) => {
 
 // ─── HERO ──────────────────────────────────────────────────────
 const Hero = () => {
-  const typed = useTypewriter(['Backend Developer', 'Java & Spring Boot', 'Open Source Contributor', 'AI-Powered Systems', 'Secure Architectures'], 80, 2000);
+  const typed = useTypewriter([
+    'Software Developer & Researcher',
+    'Software Intern @ CapConnect+',
+    'Ex-Research Intern @ IIT Bhilai',
+    'Quantum-Inspired Cryptography (QI-KDF)',
+    'OSS Contributor: TensorFlow & Eclipse & OWASP'
+  ], 75, 2000);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <MatrixRain />
@@ -270,9 +304,8 @@ const Hero = () => {
           {'> '}{typed}<span className="cursor-blink">█</span>
         </div>
         <p className="text-slate-400 text-xs sm:text-sm max-w-2xl mx-auto mb-10 leading-relaxed">
-          B.Tech Computer Science (Data Science) student with strong expertise in backend engineering,
-          AI-powered systems, and secure distributed architectures. Proven open-source contributor to
-          TensorFlow (Google) and Eclipse Foundation. Building scalable, production-grade software solutions.
+          B.Tech CS (Data Science) student specializing in backend engineering, agentic AI systems, and quantum-inspired cryptography.
+          Currently Software Intern at CapConnect+ and former Research Intern at IIT Bhilai. Proven contributor to TensorFlow (Google), Eclipse Foundation, and OWASP.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a href="#projects" className="px-8 py-3 bg-[#00ff41]/10 border border-[#00ff41]/40 text-[#00ff41] text-xs uppercase tracking-[0.2em] rounded hover:bg-[#00ff41]/20 transition-all">
@@ -286,13 +319,13 @@ const Hero = () => {
           <a href="https://github.com/sshekhar-04" target="_blank" rel="noreferrer" className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
             <Github size={18} />
           </a>
-          <a href="https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320/" target="_blank" rel="noreferrer" className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00d4ff] hover:border-[#00d4ff]/30 transition-all hover:-translate-y-0.5">
+          <a href="https://linkedin.com/in/shreyanshshekhar-dwivedi" target="_blank" rel="noreferrer" className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00d4ff] hover:border-[#00d4ff]/30 transition-all hover:-translate-y-0.5">
             <Linkedin size={18} />
           </a>
           <a href="mailto:shreyanshsd512gb@gmail.com" className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
             <Mail size={18} />
           </a>
-          <a href="/Shreyansh_S_Dwivedi_Resume_1.pdf" download className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
+          <a href="/Shreyansh_S_Dwivedi_Resume_v4.pdf" download className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
             <Download size={18} />
           </a>
         </div>
@@ -304,54 +337,85 @@ const Hero = () => {
   );
 };
 
-// ─── ABOUT ─────────────────────────────────────────────────────
+// ─── ABOUT (Compact, exact resume data) ────────────────────────
 const About = () => {
   const [ref, vis] = useReveal();
-  const stats = [
-    { val: '2+', label: 'Open Source Orgs' },
-    { val: '4+', label: 'Projects Built' },
-    { val: '50+', label: 'API Endpoints' },
-    { val: '2028', label: 'Graduation' },
-  ];
+
   return (
-    <section id="about" ref={ref} className="py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6">
+    <section id="about" ref={ref} className="py-12 sm:py-16 max-w-6xl mx-auto px-4 sm:px-6">
       <div style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.8s ease' }}>
-        <h2 style={{ fontFamily: 'Orbitron' }} className="text-2xl sm:text-3xl font-bold text-[#00ff41] mb-2 tracking-wider">{'// ABOUT'}</h2>
-        <div className="h-px bg-gradient-to-r from-[#00ff41]/40 to-transparent mb-10" />
-
-        <div className="scanlines bg-[#0a1628] border border-[#00ff41]/15 rounded-xl p-6 sm:p-10">
-          <div className="flex items-center gap-2 mb-6 text-[#00ff41] text-xs">
-            <span className="w-3 h-3 rounded-full bg-[#ff003c]/60" />
-            <span className="w-3 h-3 rounded-full bg-yellow-500/60" />
-            <span className="w-3 h-3 rounded-full bg-[#00ff41]/60" />
-            <span className="ml-3 text-slate-600">root@shreyansh:~$ cat about.txt</span>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-2">
+          <h2 style={{ fontFamily: 'Orbitron' }} className="text-2xl sm:text-3xl font-bold text-[#00ff41] tracking-wider">
+            {'// ABOUT'}
+          </h2>
+          <div className="text-[10px] text-[#00d4ff] font-mono mt-1 sm:mt-0 tracking-widest">
+            [IDENT: SHREYANSH SHEKHAR DWIVEDI]
           </div>
-          <p className="text-slate-300 text-sm leading-relaxed mb-4">
-            B.Tech Computer Science (Data Science) student with strong expertise in backend engineering,
-            AI-powered systems, and secure distributed architectures. Proven open-source contributor to
-            large-scale repositories including <span className="text-[#00ff41]">TensorFlow (Google)</span> and <span className="text-[#00ff41]">Eclipse Foundation</span>.
-          </p>
-          <p className="text-slate-400 text-xs mb-4 leading-relaxed">
-            Experienced in building high-reliability RESTful APIs, implementing Retrieval-Augmented Generation (RAG)
-            pipelines, and integrating cloud-native DevOps workflows using Docker, Kubernetes, and CI/CD pipelines.
-            Passionate about developing scalable, production-grade software solutions.
-          </p>
+        </div>
+        <div className="h-px bg-gradient-to-r from-[#00ff41]/40 via-[#00d4ff]/20 to-transparent mb-5" />
 
-          {/* Education */}
-          <div className="bg-[#030712]/60 border border-[#00ff41]/10 rounded-lg p-4 mb-6">
-            <div className="text-[10px] text-[#00d4ff] uppercase tracking-widest mb-2">{'> Education'}</div>
-            <div className="text-sm text-white font-semibold">B.Tech — Computer Science Engineering (Data Science)</div>
-            <div className="text-xs text-slate-400 mt-1">JSS Academy of Technical Education, Noida, Uttar Pradesh, India</div>
-            <div className="text-[10px] text-[#00ff41] mt-1">Expected Graduation: 2028</div>
+        <div className="scanlines bg-[#0a1628] border border-[#00ff41]/15 rounded-xl p-5 sm:p-6">
+          {/* Top Info Bar */}
+          <div className="flex flex-wrap items-center justify-between gap-3 pb-3 mb-3.5 border-b border-[#00ff41]/10 text-xs font-mono">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#ff003c]/60" />
+              <span className="w-2.5 h-2.5 rounded-full bg-yellow-500/60" />
+              <span className="w-2.5 h-2.5 rounded-full bg-[#00ff41]/60" />
+              <span className="text-slate-400 font-semibold ml-1">root@shreyansh:~$ cat profile.txt</span>
+            </div>
+            <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-400">
+              <span className="text-[#00ff41] font-semibold">Software Developer & Researcher</span>
+              <span className="text-slate-600 hidden sm:inline">•</span>
+              <span>Noida, UP, India</span>
+            </div>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {stats.map((s, i) => (
-              <div key={i} className="text-center p-4 bg-[#030712]/60 border border-[#00ff41]/10 rounded-lg" style={{ animationDelay: `${i * 0.1}s` }}>
-                <div style={{ fontFamily: 'Orbitron' }} className="text-2xl font-bold text-[#00ff41]">{s.val}</div>
-                <div className="text-[10px] text-slate-500 uppercase tracking-widest mt-1">{s.label}</div>
+          {/* Professional Summary from Resume */}
+          <div className="mb-4 relative z-10 text-slate-300 text-xs sm:text-sm leading-relaxed space-y-2">
+            <p>
+              B.Tech CS (Data Science) student specializing in backend engineering, agentic AI systems, and quantum-inspired cryptography. Currently <span className="text-[#00ff41] font-semibold">Software Intern at CapConnect+</span> and former <span className="text-[#00d4ff] font-semibold">Research Intern at IIT Bhilai</span> (transmon qubit ML research).
+            </p>
+            <p className="text-slate-400 text-xs">
+              Proven open-source contributor to <span className="text-[#00ff41]">TensorFlow (Google)</span>, <span className="text-[#00ff41]">Eclipse Foundation</span>, and <span className="text-[#00ff41]">OWASP</span>. Skilled in Spring Boot microservices, RAG pipelines, Docker/Kubernetes, and secure distributed architectures.
+            </p>
+          </div>
+
+          {/* Education & Quick Stats Bar */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 relative z-10 text-xs font-mono">
+            <div className="bg-[#030712]/60 border border-[#00ff41]/15 rounded-lg p-3 flex items-center justify-between gap-2">
+              <div className="flex items-center gap-2">
+                <GraduationCap size={15} className="text-[#00d4ff] shrink-0" />
+                <div>
+                  <div className="text-white font-semibold text-[11px]">B.Tech — CSE (Data Science)</div>
+                  <div className="text-[10px] text-slate-400">JSS Academy of Technical Education, Noida</div>
+                </div>
               </div>
-            ))}
+              <div className="text-right shrink-0">
+                <span className="text-[9px] text-[#00ff41] bg-[#00ff41]/10 px-2 py-0.5 rounded border border-[#00ff41]/20 block">
+                  Expected 2028
+                </span>
+                <span className="text-[9px] text-slate-400 font-mono mt-0.5 block">
+                  CGPA: 7.31
+                </span>
+              </div>
+            </div>
+
+            <div className="bg-[#030712]/60 border border-[#00ff41]/15 rounded-lg p-3 flex items-center justify-around text-center">
+              <div>
+                <div style={{ fontFamily: 'Orbitron' }} className="text-sm font-bold text-[#00ff41]">3 Orgs</div>
+                <div className="text-[8px] text-slate-400 uppercase tracking-wider">TF / Eclipse / OWASP</div>
+              </div>
+              <div className="h-6 w-px bg-slate-800" />
+              <div>
+                <div style={{ fontFamily: 'Orbitron' }} className="text-sm font-bold text-[#00d4ff]">QI-KDF</div>
+                <div className="text-[8px] text-slate-400 uppercase tracking-wider">Crypto Research</div>
+              </div>
+              <div className="h-6 w-px bg-slate-800" />
+              <div>
+                <div style={{ fontFamily: 'Orbitron' }} className="text-sm font-bold text-[#00ff41]">ML & RAG</div>
+                <div className="text-[8px] text-slate-400 uppercase tracking-wider">Agentic AI</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -361,13 +425,12 @@ const About = () => {
 
 // ─── SKILLS (exact resume categories) ──────────────────────────
 const skillCategories = [
-  { category: 'Programming Languages', items: ['Java (Advanced)', 'Python (Proficient)', 'Rust (Proficient)', 'Bash/Shell Scripting'] },
-  { category: 'Backend & AI', items: ['Spring Boot', 'Spring AI', 'RESTful APIs', 'RAG Architecture', 'WebSockets (STOMP)', 'OOP', 'Data Structures & Algorithms'] },
-  { category: 'Frontend & Desktop', items: ['React 18', 'TypeScript', 'Tauri (Rust)', 'xterm.js', 'Tailwind CSS', 'Vite'] },
-  { category: 'DevOps & Cloud', items: ['Docker', 'Docker Compose', 'Kubernetes', 'Linux', 'Maven', 'Git', 'CI/CD Pipelines'] },
-  { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'ChromaDB (Vector DB)'] },
-  { category: 'Security & Cryptography', items: ['AES-256 GCM', 'SHA-256', 'Quantum Key Distribution (BB84)', 'Penetration Testing Fundamentals'] },
-  { category: 'AI & LLM Integration', items: ['Retrieval-Augmented Generation (RAG)', 'Vision Analysis (GPT-4o)', 'Semantic Compression', 'Embedding-based Similarity Search', 'OpenAI API', 'Gemini API'] },
+  { category: 'Languages', items: ['Java (Advanced)', 'Rust', 'Python', 'Bash'] },
+  { category: 'Backend & AI', items: ['Spring Boot', 'Spring AI', 'RESTful APIs', 'RAG', 'WebSockets (STOMP)', 'DSA'] },
+  { category: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Linux', 'Maven', 'Git', 'CI/CD'] },
+  { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'ChromaDB'] },
+  { category: 'Security / Crypto', items: ['AES-256-GCM', 'SHA-256', 'BB84 QKD Simulation', 'Penetration Testing'] },
+  { category: 'LLM Integration', items: ['RAG Pipelines', 'Embedding Search', 'OpenAI API', 'Gemini API'] },
 ];
 
 const Skills = () => {
@@ -382,7 +445,7 @@ const Skills = () => {
           <div className="text-[#00ff41] text-xs mb-6">
             <span className="text-slate-600">root@shreyansh:~$</span> nmap -sV --skill-scan --deep
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {skillCategories.map((group, i) => (
               <div key={i}
                 className="bg-[#030712]/60 border border-[#00ff41]/10 rounded-lg p-5 hover:border-[#00ff41]/30 transition-all duration-300"
@@ -393,7 +456,7 @@ const Skills = () => {
                 </div>
                 <div className="flex flex-wrap gap-1.5">
                   {group.items.map((skill, j) => (
-                    <span key={j} className="text-[10px] px-2.5 py-1 bg-[#00ff41]/5 text-[#00ff41]/80 border border-[#00ff41]/15 rounded hover:bg-[#00ff41]/15 hover:text-[#00ff41] transition-all cursor-default">
+                    <span key={j} className="text-[10px] px-2.5 py-1 bg-[#00ff41]/5 text-[#00ff41]/80 border border-[#00ff41]/15 rounded hover:bg-[#00ff41]/15 hover:text-[#00ff41] transition-all cursor-default font-mono">
                       {skill}
                     </span>
                   ))}
@@ -402,7 +465,7 @@ const Skills = () => {
             ))}
           </div>
           <div className="mt-6 text-[10px] text-slate-600">
-            {'// Scan complete. 6 categories detected. 25+ modules loaded.'}
+            {'// Scan complete. 6 categories verified. Production-grade toolset loaded.'}
           </div>
         </div>
       </div>
@@ -414,29 +477,19 @@ const Skills = () => {
 const projects = [
   {
     title: 'ARIA — Adaptive Realtime Intelligence Agent',
-    period: '2026', category: 'AI / Desktop',
-    desc: 'OS-level AI assistant combining a vision RAG pipeline, LLM-powered terminal executor with intent classification (READ/WRITE/DESTRUCTIVE), and rolling semantic memory. Screenshots are captured every 30s, described by GPT-4o, embedded into ChromaDB, and auto-compressed into session chunks. Git-aware context injection, offline wake word detection, and full shutdown memory control. Runs entirely on-device — no cloud storage, no persistent telemetry.',
-    tags: ['Java 17', 'Spring Boot', 'Spring AI', 'React 18', 'Tauri', 'Python', 'ChromaDB', 'MongoDB', 'OpenAI', 'RAG', 'WebSocket'],
+    period: '2025 – Present', category: 'Agentic AI / Personal Project',
+    desc: 'OS-level agentic AI with LLM-controlled terminal access and a READ/WRITE/DESTRUCTIVE intent classifier that gates every command pre-execution, preventing unrecoverable system mutations. Spring Boot 3.x backend + Python/ChromaDB RAG sidecar for persistent memory; React/Tauri desktop UI with offline Porcupine wake-word detection; MongoDB audit trail — fully air-gapped capable.',
+    tags: ['Java 21', 'Spring Boot 3.x', 'Python', 'ChromaDB', 'RAG', 'React', 'Tauri', 'MongoDB', 'Porcupine'],
     live: 'https://aria.shreyansh.dev',
     github: 'https://github.com/sshekhar-04/ARIA--Adaptive-Realtime-Intelligence-Agent.git',
     classified: false,
     notLive: true,
   },
   {
-    title: 'EventX — Full-Stack Event Booking Platform',
-    period: '2026', category: 'Full-Stack / SaaS',
-    desc: 'Production-grade event booking platform with 50+ REST endpoints, JWT dual-token auth (3 roles), Razorpay HMAC-SHA256 payment verification, complete booking state machine with audit trails, RAG-powered AI chatbot using Spring AI + MongoDB Vector Search, and manager verification workflows. 9 MongoDB collections with compound indexes, TTL auto-cleanup, and Cloudinary image management.',
-    tags: ['Java 17', 'Spring Boot', 'Spring Security', 'MongoDB Atlas', 'Spring AI', 'RAG', 'OpenAI', 'Razorpay', 'JWT', 'React'],
-    live: 'https://eventx-platform.shreyansh.dev',
-    github: 'https://github.com/sshekhar-04/EventX.git',
-    classified: false,
-    notLive: true,
-  },
-  {
     title: 'Multi-Modal RAG & AI Chat Service',
     period: 'Jan 2026', category: 'AI / Backend',
-    desc: 'Retrieval-Augmented Generation pipeline enabling context-aware querying over private datasets using embedding-based similarity search, reducing LLM hallucinations. Custom Spring @Configuration with @Qualifier annotations for multi-provider AI beans (Gemini & OpenAI). Secure credential management for production-ready deployment.',
-    tags: ['Java 21', 'Spring Boot', 'Spring AI', 'REST', 'RAG', 'OpenAI API', 'Gemini API', 'Embeddings'],
+    desc: 'Built a RAG pipeline over private datasets using embedding-based similarity search to minimize hallucinations; engineered Spring @Configuration / @Qualifier multi-provider AI bean management (Gemini + OpenAI).',
+    tags: ['Java 21', 'Spring Boot', 'Spring AI', 'OpenAI API', 'Gemini API', 'Embedding Search'],
     live: 'https://rag-ai-chat.shreyansh.dev',
     github: 'https://github.com/sshekhar-04/RAG_model.git',
     classified: false,
@@ -554,83 +607,279 @@ const Projects = () => {
   );
 };
 
-// ─── OPEN SOURCE EXPERIENCE & ACHIEVEMENTS ────────────────────
+// ─── ACHIEVEMENTS & HIGHLIGHTS (exact resume data) ─────────────
+const achievementsData = [
+  {
+    category: 'Enterprise Open Source',
+    badge: 'OSS // ENTERPRISE',
+    icon: GitPullRequest,
+    statement: 'Merged contributions into TensorFlow (Google), Eclipse Foundation, and OWASP as a first-year undergraduate — spanning three enterprise-scale open-source ecosystems.',
+    details: [
+      'TensorFlow (Google): Resolved CI/CD build failures; integrated Maven Spotless.',
+      'Eclipse Foundation (4diac IDE): 4 merged internationalization (i18n) PRs.',
+      'OWASP FinBot CTF: 3 merged PRs (#265–#267) fixing audit trail bugs.'
+    ],
+    tags: ['TensorFlow', 'Eclipse 4diac', 'OWASP', 'Maven Spotless', 'CI/CD']
+  },
+  {
+    category: 'Original Cryptography Research',
+    badge: 'RESEARCH // QI-KDF',
+    icon: ShieldCheck,
+    statement: 'Authored original cryptography research (QI-KDF): 2^190.5 key space, zero modulo bias, ~500K ops/s — addressing a gap no existing RFC standard covers.',
+    details: [
+      '6-stage deterministic key derivation function with BigDecimal precision.',
+      'Verified strict SHA-256 avalanche criterion (~50.1% flip rate) across 10K+ trials.',
+      'Roadmap: SHA-3 migration, CRYSTALS-Kyber wrapping, QRNG, and NIST submission.'
+    ],
+    tags: ['QI-KDF', 'AES-256-GCM', 'SHA-256', 'Avalanche Criterion', 'Quantum Entropy']
+  },
+  {
+    category: 'Agentic AI Architecture (ARIA)',
+    badge: 'AI // AGENTIC SYSTEMS',
+    icon: Cpu,
+    statement: 'Designed and shipped ARIA, an OS-level agentic AI with intent-aware pre-execution guardrails, cited as a working proof-of-concept in a GSoC 2026 OWASP proposal.',
+    details: [
+      'READ/WRITE/DESTRUCTIVE intent classifier gating every command pre-execution.',
+      'Spring Boot 3.x backend + Python/ChromaDB RAG sidecar for rolling memory.',
+      'Offline Porcupine wake-word detection + air-gapped capable MongoDB audit trail.'
+    ],
+    tags: ['Agentic AI', 'Spring Boot 3.x', 'ChromaDB', 'RAG', 'GSoC OWASP PoC']
+  },
+  {
+    category: 'Recognition & Community',
+    badge: 'HONORS // GITHUB',
+    icon: Trophy,
+    statement: 'Recognised with the GitHub Pull Shark badge for open-source contributions to TensorFlow Java.',
+    details: [
+      'Active contributor to foundational machine learning repositories.',
+      'Strong foundation in system design, clean code principles, and scalable microservices.',
+      'Active on Codeforces (ssd512gb) solving complex Data Structures & Algorithms.'
+    ],
+    tags: ['Pull Shark Badge', 'TensorFlow Java', 'Codeforces', 'DSA']
+  }
+];
+
+const Achievements = () => {
+  const [ref, vis] = useReveal(0.15);
+
+  return (
+    <section id="achievements" ref={ref} className="py-20 sm:py-28 max-w-7xl mx-auto px-4 sm:px-6">
+      <div style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.8s ease' }}>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-2">
+          <div>
+            <h2 style={{ fontFamily: 'Orbitron' }} className="text-2xl sm:text-3xl font-bold text-[#00ff41] tracking-wider">
+              {'// ACHIEVEMENTS & HIGHLIGHTS'}
+            </h2>
+          </div>
+          <div className="text-[10px] text-[#00d4ff] font-mono mt-2 sm:mt-0 tracking-widest">
+            [STATUS: VERIFIED CREDENTIALS]
+          </div>
+        </div>
+        <div className="h-px bg-gradient-to-r from-[#00ff41]/40 via-[#00d4ff]/20 to-transparent mb-8" />
+
+        <div className="bg-[#0a1628] border border-[#00ff41]/20 rounded-xl p-5 sm:p-7 mb-8 scanlines">
+          <div className="flex items-center gap-2 mb-5 text-xs font-mono">
+            <span className="w-3 h-3 rounded-full bg-[#ff003c]/60" />
+            <span className="w-3 h-3 rounded-full bg-yellow-500/60" />
+            <span className="w-3 h-3 rounded-full bg-[#00ff41]/60" />
+            <span className="ml-3 text-slate-500">root@shreyansh:~$ ./verify_credentials.sh --achievements --verified</span>
+          </div>
+
+          {/* Achievements Grid (exact data from resume) */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {achievementsData.map((a, i) => {
+              const IconComp = a.icon;
+              return (
+                <div
+                  key={i}
+                  className="bg-[#030712]/70 border border-[#00ff41]/15 rounded-xl p-5 hover:border-[#00ff41]/40 hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between group"
+                  style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(20px)', transition: `all 0.6s ease ${i * 0.1}s` }}
+                >
+                  <div>
+                    <div className="flex items-center justify-between mb-3">
+                      <div className="p-2 rounded-lg bg-[#00ff41]/10 border border-[#00ff41]/20 text-[#00ff41] group-hover:scale-105 transition-transform">
+                        <IconComp size={16} />
+                      </div>
+                      <span className="text-[8px] text-[#00d4ff] bg-[#00d4ff]/10 px-2 py-0.5 rounded border border-[#00d4ff]/20 uppercase tracking-widest font-mono">
+                        {a.badge}
+                      </span>
+                    </div>
+
+                    <div className="text-[11px] text-[#00ff41] font-semibold mb-2 flex items-center gap-1.5 font-mono">
+                      <Star size={12} className="text-yellow-500 fill-yellow-500" />
+                      {a.category}
+                    </div>
+
+                    {/* Statement */}
+                    <p className="text-xs text-slate-200 leading-relaxed font-medium mb-3">
+                      {a.statement}
+                    </p>
+
+                    {/* Details */}
+                    <ul className="space-y-1.5 mb-4">
+                      {a.details.map((d, dIdx) => (
+                        <li key={dIdx} className="flex items-start gap-2 text-[10px] text-slate-400 leading-relaxed font-mono">
+                          <span className="text-[#00ff41] shrink-0">▸</span>
+                          <span>{d}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  {/* Tags */}
+                  <div className="pt-3 border-t border-[#00ff41]/10 flex flex-wrap gap-1">
+                    {a.tags.map((t, tIdx) => (
+                      <span key={tIdx} className="text-[8px] px-2 py-0.5 bg-[#00ff41]/5 text-[#00ff41]/70 border border-[#00ff41]/10 rounded font-mono">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-5 pt-3 border-t border-[#00ff41]/10 flex flex-wrap items-center justify-between gap-2 text-[10px] text-slate-500 font-mono">
+            <div>{'// Sourced directly from Shreyansh_S_Dwivedi_Resume_v4.pdf'}</div>
+            <div className="text-[#00ff41]">VERIFIED HONORS & RESEARCH</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+// ─── WORK EXPERIENCE (ALL 4 experiences from resume PDF, compact 2x2 grid) ──
+const experiencesData = [
+  {
+    org: 'CapConnect+',
+    abbr: 'CC+',
+    role: 'Software Intern',
+    period: 'Aug 2026 – Present',
+    badge: 'INDUSTRY INTERNSHIP',
+    location: 'Production Engineering',
+    bullets: [
+      'Contributing to full-stack feature development and code quality initiatives as part of the engineering team.',
+      'Applying Java/Spring Boot and React expertise in a production environment.'
+    ],
+    tech: ['Java', 'Spring Boot', 'React', 'Production Engineering', 'Full-Stack']
+  },
+  {
+    org: 'IIT Bhilai (Online Programs)',
+    abbr: 'IIT',
+    role: 'Research Intern',
+    period: 'Jun 2026 – Jul 2026',
+    badge: 'QUANTUM ML RESEARCH',
+    location: 'IIT Research Lab',
+    bullets: [
+      'Researched transmon qubit architecture and quantum coherence using machine learning.',
+      'Built a full ML pipeline (Random Forest, XGBoost with SHAP, Graph Neural Network) to predict materials that improve qubit coherence.'
+    ],
+    tech: ['Quantum Coherence', 'Transmon Qubits', 'Random Forest', 'XGBoost', 'SHAP', 'GNN']
+  },
+  {
+    org: 'Quantum-Inspired Cryptography',
+    abbr: 'QI',
+    role: 'Independent Researcher',
+    period: 'Nov 2025 – Aug 2026',
+    badge: 'CRYPTOGRAPHY RESEARCH',
+    location: 'Original Research',
+    bullets: [
+      'Designed QI-KDF: a 6-stage deterministic key derivation function combining BigDecimal precision seeding with microsecond temporal entropy — achieving a 2^190.5 key space, zero modulo bias, and ~500K ops/s throughput.',
+      'Verified strict SHA-256 avalanche criterion (~50.1% flip rate) across 10K+ trials; roadmap targets SHA-3 migration, CRYSTALS-Kyber wrapping, QRNG integration, and RFC/NIST standardization submission.'
+    ],
+    tech: ['QI-KDF', 'BigDecimal Precision', 'Temporal Entropy', 'SHA-256 Avalanche', 'CRYSTALS-Kyber']
+  },
+  {
+    org: 'TensorFlow, Eclipse & OWASP',
+    abbr: 'OSS',
+    role: 'Open Source Contributor',
+    period: 'Nov 2025 – Mar 2026',
+    badge: 'TIER-1 OPEN SOURCE',
+    location: 'Google / Eclipse / OWASP',
+    bullets: [
+      "TensorFlow (Google): Resolved CI/CD 'run format check' pipeline failures; integrated Maven Spotless for automated style enforcement.",
+      'Eclipse Foundation (4diac IDE): 4 merged internationalization (i18n) PRs, reviewed by maintainer Alois Zoitl.',
+      'OWASP FinBot CTF: 3 merged PRs (#265–#267) fixing f-string interpolation bugs in audit trails, each with unit tests.'
+    ],
+    tech: ['TensorFlow (Google)', 'Maven Spotless', 'Eclipse 4diac', 'OWASP', 'CI/CD']
+  }
+];
+
 const Experience = () => {
   const [ref, vis] = useReveal();
-  const oss = [
-    {
-      org: 'TensorFlow (Google Open Source)',
-      abbr: 'TF',
-      bullets: [
-        'Resolved CI/CD \'run format check\' pipeline failures, improving build reliability for a global multi-thousand contributor repository.',
-        'Automated code-style enforcement by integrating Maven Spotless plugin, ensuring consistent formatting standards across the large-scale codebase.',
-        'Contributed to maintaining code quality and consistency in one of the world\'s most widely used machine learning frameworks.',
-      ],
-    },
-    {
-      org: 'Eclipse Foundation',
-      abbr: 'ECL',
-      bullets: [
-        'Improved project infrastructure and developer tooling to enhance contributor onboarding and productivity.',
-        'Refactored test suites to improve maintainability, code coverage, and stability across multiple environments.',
-        'Resolved configuration issues to ensure seamless cross-environment integration and compatibility.',
-      ],
-    },
-  ];
-  const achievements = [
-    'Contributed to enterprise-scale open-source repositories including TensorFlow (Google) and Eclipse Foundation.',
-    'Built secure distributed backend systems applying advanced cryptography (AES-256 GCM, SHA-256, QKD simulation).',
-    'Designed AI-driven backend architectures integrating multiple LLM providers (OpenAI, Gemini) using RAG pipelines.',
-    'Strong foundation in system design, clean code principles, and scalable microservices architecture.',
-    'Actively solving Data Structures & Algorithms problems; strong interest in Cloud Native infrastructure and distributed systems.',
-  ];
-  return (
-    <section id="experience" ref={ref} className="py-24 sm:py-32 max-w-7xl mx-auto px-4 sm:px-6">
-      <div style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.8s ease' }}>
-        <h2 style={{ fontFamily: 'Orbitron' }} className="text-2xl sm:text-3xl font-bold text-[#00ff41] mb-2 tracking-wider">{'// OPEN SOURCE & ACHIEVEMENTS'}</h2>
-        <div className="h-px bg-gradient-to-r from-[#00ff41]/40 to-transparent mb-10" />
 
-        {/* Open Source Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-          {oss.map((o, i) => (
-            <div key={i}
-              className="bg-[#0a1628] border border-[#00ff41]/15 rounded-xl p-6 hover:border-[#00ff41]/30 transition-all duration-300"
-              style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(20px)', transition: `all 0.6s ease ${i * 0.15}s` }}
+  return (
+    <section id="experience" ref={ref} className="py-14 sm:py-20 max-w-6xl mx-auto px-4 sm:px-6">
+      <div style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(30px)', transition: 'all 0.8s ease' }}>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-2">
+          <h2 style={{ fontFamily: 'Orbitron' }} className="text-2xl sm:text-3xl font-bold text-[#00ff41] tracking-wider">
+            {'// EXPERIENCE'}
+          </h2>
+          <div className="text-[10px] text-[#00d4ff] font-mono mt-1 sm:mt-0 tracking-widest">
+            [WORK & RESEARCH EXPERIENCE // 4 TRACKS VERIFIED]
+          </div>
+        </div>
+        <div className="h-px bg-gradient-to-r from-[#00ff41]/40 via-[#00d4ff]/20 to-transparent mb-6" />
+
+        {/* Compact 2x2 Grid of ALL 4 Experiences from Resume */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5">
+          {experiencesData.map((exp, i) => (
+            <div
+              key={i}
+              className="glitch-card bg-[#0a1628] border border-[#00ff41]/15 rounded-xl p-4 sm:p-5 hover:border-[#00ff41]/40 transition-all duration-300 flex flex-col justify-between group scanlines"
+              style={{ opacity: vis ? 1 : 0, transform: vis ? 'translateY(0)' : 'translateY(20px)', transition: `all 0.6s ease ${i * 0.1}s` }}
             >
-              <div className="flex items-center gap-3 mb-4">
-                <div className="hex-badge w-12 h-12 bg-[#030712] border border-[#00ff41]/30 flex items-center justify-center shrink-0" style={{ animationDelay: `${i}s` }}>
-                  <span style={{ fontFamily: 'Orbitron' }} className="text-[#00ff41] text-[10px] font-black">{o.abbr}</span>
+              <div>
+                {/* Header Bar */}
+                <div className="flex items-start justify-between gap-2 mb-3 relative z-10">
+                  <div className="flex items-center gap-2.5">
+                    <div className="hex-badge w-9 h-9 bg-[#030712] border border-[#00ff41]/40 flex items-center justify-center shrink-0">
+                      <span style={{ fontFamily: 'Orbitron' }} className="text-[#00ff41] text-[9px] font-black">
+                        {exp.abbr}
+                      </span>
+                    </div>
+                    <div>
+                      <h3 className="text-sm font-bold text-white group-hover:text-[#00ff41] transition-colors leading-tight">
+                        {exp.org}
+                      </h3>
+                      <div className="text-[11px] text-[#00ff41] font-mono mt-0.5">
+                        {exp.role}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-right shrink-0">
+                    <span className="text-[8px] text-[#00d4ff] bg-[#00d4ff]/10 px-2 py-0.5 rounded border border-[#00d4ff]/20 uppercase tracking-widest font-mono block">
+                      {exp.badge}
+                    </span>
+                    <span className="text-[8px] text-slate-500 font-mono mt-1 block">
+                      {exp.period}
+                    </span>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-xs text-white font-semibold leading-tight">{o.org}</div>
-                  <div className="text-[10px] text-[#00d4ff] mt-0.5">Open Source Contributor</div>
-                </div>
+
+                {/* Bullets (Exact from resume) */}
+                <ul className="space-y-1.5 mb-3.5 relative z-10">
+                  {exp.bullets.map((bullet, bIdx) => (
+                    <li key={bIdx} className="flex items-start gap-1.5 text-[11px] text-slate-300 leading-relaxed font-mono">
+                      <span className="text-[#00ff41] shrink-0">▸</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-2">
-                {o.bullets.map((b, j) => (
-                  <li key={j} className="flex items-start gap-2 text-[11px] text-slate-400 leading-relaxed">
-                    <span className="text-[#00ff41] mt-0.5 shrink-0">▸</span>
-                    <span>{b}</span>
-                  </li>
+
+              {/* Tech Stack Pills */}
+              <div className="pt-2.5 border-t border-[#00ff41]/10 flex flex-wrap gap-1 relative z-10">
+                {exp.tech.map((t, tIdx) => (
+                  <span key={tIdx} className="text-[8px] px-2 py-0.5 bg-[#00ff41]/5 text-[#00ff41]/80 border border-[#00ff41]/15 rounded font-mono">
+                    {t}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </div>
           ))}
-        </div>
-
-        {/* Achievements */}
-        <div className="scanlines bg-[#0a1628] border border-[#00ff41]/15 rounded-xl p-6">
-          <div className="text-[10px] text-[#00d4ff] uppercase tracking-[0.2em] mb-4 relative z-10">{'> Achievements & Highlights'}</div>
-          <ul className="space-y-2.5 relative z-10">
-            {achievements.map((a, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-slate-400 leading-relaxed"
-                style={{ opacity: vis ? 1 : 0, transition: `all 0.5s ease ${0.3 + i * 0.1}s` }}
-              >
-                <span className="text-yellow-500 mt-0.5 shrink-0">★</span>
-                <span>{a}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
@@ -678,7 +927,7 @@ const Contact = () => {
                 <div className="text-[10px] text-[#00ff41]/60 uppercase tracking-widest mb-1.5">{`> Enter ${f.label}:`}</div>
                 <input
                   type={f.type} value={f.val} onChange={e => f.set(e.target.value)} placeholder={f.placeholder}
-                  className="w-full bg-[#030712] border border-[#00ff41]/20 rounded px-4 py-3 text-xs text-[#00d4ff] placeholder-slate-600 focus:outline-none focus:border-[#00ff41]/50 transition-colors"
+                  className="w-full bg-[#030712] border border-[#00ff41]/20 rounded px-4 py-3 text-xs text-[#00d4ff] placeholder-slate-600 focus:outline-none focus:border-[#00ff41]/50 transition-colors font-mono"
                 />
               </div>
             ))}
@@ -686,29 +935,29 @@ const Contact = () => {
               <div className="text-[10px] text-[#00ff41]/60 uppercase tracking-widest mb-1.5">{`> Enter MESSAGE:`}</div>
               <textarea
                 value={msg} onChange={e => setMsg(e.target.value)} placeholder="Your message..." rows={4}
-                className="w-full bg-[#030712] border border-[#00ff41]/20 rounded px-4 py-3 text-xs text-[#00d4ff] placeholder-slate-600 focus:outline-none focus:border-[#00ff41]/50 transition-colors resize-none"
+                className="w-full bg-[#030712] border border-[#00ff41]/20 rounded px-4 py-3 text-xs text-[#00d4ff] placeholder-slate-600 focus:outline-none focus:border-[#00ff41]/50 transition-colors resize-none font-mono"
               />
             </div>
 
             <div className="flex items-center gap-4">
               <div
                 onClick={handleSend}
-                className="px-6 py-2.5 bg-[#00ff41]/10 border border-[#00ff41]/40 text-[#00ff41] text-[10px] uppercase tracking-[0.2em] rounded cursor-pointer hover:bg-[#00ff41]/20 transition-all active:scale-95 select-none"
+                className="px-6 py-2.5 bg-[#00ff41]/10 border border-[#00ff41]/40 text-[#00ff41] text-[10px] uppercase tracking-[0.2em] rounded cursor-pointer hover:bg-[#00ff41]/20 transition-all active:scale-95 select-none font-mono"
               >
                 {sent ? '✓ TRANSMITTED' : '> TRANSMIT'}
               </div>
-              {sent && <span className="text-[10px] text-[#00ff41] animate-pulse">Encrypted message sent successfully.</span>}
+              {sent && <span className="text-[10px] text-[#00ff41] animate-pulse font-mono">Encrypted message sent successfully.</span>}
             </div>
           </div>
 
           <div className="mt-8 pt-6 border-t border-[#00ff41]/10 flex flex-wrap gap-6">
-            <a href="mailto:shreyanshsd512gb@gmail.com" className="flex items-center gap-2 text-[10px] text-slate-500 hover:text-[#00ff41] transition-colors uppercase tracking-widest">
+            <a href="mailto:shreyanshsd512gb@gmail.com" className="flex items-center gap-2 text-[10px] text-slate-500 hover:text-[#00ff41] transition-colors uppercase tracking-widest font-mono">
               <Mail size={12} /> shreyanshsd512gb@gmail.com
             </a>
-            <a href="https://github.com/sshekhar-04" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] text-slate-500 hover:text-[#00ff41] transition-colors uppercase tracking-widest">
+            <a href="https://github.com/sshekhar-04" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] text-slate-500 hover:text-[#00ff41] transition-colors uppercase tracking-widest font-mono">
               <Github size={12} /> GitHub
             </a>
-            <a href="https://www.linkedin.com/in/shreyansh-shekhar-dwivedi-632293320/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] text-slate-500 hover:text-[#00ff41] transition-colors uppercase tracking-widest">
+            <a href="https://linkedin.com/in/shreyanshshekhar-dwivedi" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-[10px] text-slate-500 hover:text-[#00d4ff] transition-colors uppercase tracking-widest font-mono">
               <Linkedin size={12} /> LinkedIn
             </a>
           </div>
@@ -734,7 +983,7 @@ const Footer = () => {
   };
   return (
     <footer className="border-t border-[#00ff41]/10 py-8 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-slate-600 uppercase tracking-widest">
+      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-[10px] text-slate-600 uppercase tracking-widest font-mono">
         <span>© {new Date().getFullYear()} Shreyansh Shekhar Dwivedi</span>
         <span className="text-[#00ff41]/50">
           Session Uptime: <span className="text-[#00ff41]">{fmt(uptime)}</span>
@@ -773,6 +1022,8 @@ const App = () => {
           <About />
           <Skills />
           <Projects />
+          {/* Switched: Achievements comes first, then Experience */}
+          <Achievements />
           <Experience />
           <Contact />
           <Footer />
