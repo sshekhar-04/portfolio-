@@ -259,7 +259,7 @@ const Navbar = ({ active }) => {
           {links.map(l => (
             <a key={l} href={`#${l}`} className={`px-3 py-2 text-[10px] uppercase tracking-[0.2em] rounded transition-all ${active === l ? 'text-[#00ff41] bg-[#00ff41]/10' : 'text-slate-500 hover:text-[#00ff41]'}`}>{l}</a>
           ))}
-          <a href="/Shreyansh_S_Dwivedi_Resume_v4.pdf" download className="ml-3 px-4 py-2 text-[10px] uppercase tracking-[0.2em] border border-[#00ff41]/30 text-[#00ff41] rounded hover:bg-[#00ff41]/10 transition-all flex items-center gap-1.5">
+          <a href="/Shreyansh_Dwivedi_Resume_v5.pdf" download className="ml-3 px-4 py-2 text-[10px] uppercase tracking-[0.2em] border border-[#00ff41]/30 text-[#00ff41] rounded hover:bg-[#00ff41]/10 transition-all flex items-center gap-1.5">
             <Download size={12} /> Resume
           </a>
         </div>
@@ -325,7 +325,7 @@ const Hero = () => {
           <a href="mailto:shreyanshsd512gb@gmail.com" className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
             <Mail size={18} />
           </a>
-          <a href="/Shreyansh_S_Dwivedi_Resume_v4.pdf" download className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
+          <a href="/Shreyansh_Dwivedi_Resume_v5.pdf" download className="p-3 border border-slate-700/50 rounded-lg text-slate-500 hover:text-[#00ff41] hover:border-[#00ff41]/30 transition-all hover:-translate-y-0.5">
             <Download size={18} />
           </a>
         </div>
@@ -426,7 +426,9 @@ const About = () => {
 // ─── SKILLS (exact resume categories) ──────────────────────────
 const skillCategories = [
   { category: 'Languages', items: ['Java (Advanced)', 'Rust', 'Python', 'Bash'] },
-  { category: 'Backend & AI', items: ['Spring Boot', 'Spring AI', 'RESTful APIs', 'RAG', 'WebSockets (STOMP)', 'DSA'] },
+  { category: 'Backend & AI', items: ['Spring Boot', 'Spring AI', 'Microservices', 'RESTful APIs', 'RAG', 'WebSockets (STOMP)', 'DSA'] },
+  { category: 'Testing & API Tools', items: ['JUnit', 'Postman', 'Unit Testing', 'API Testing', 'Maven Spotless'] },
+  { category: 'Blockchain', items: ['Hyperledger Fabric', 'Chaincode (Java)', 'Smart Contracts', 'Permissioned Ledgers'] },
   { category: 'DevOps & Cloud', items: ['Docker', 'Kubernetes', 'Linux', 'Maven', 'Git', 'CI/CD'] },
   { category: 'Databases', items: ['PostgreSQL', 'MongoDB', 'ChromaDB'] },
   { category: 'Security / Crypto', items: ['AES-256-GCM', 'SHA-256', 'BB84 QKD Simulation', 'Penetration Testing'] },
@@ -465,7 +467,7 @@ const Skills = () => {
             ))}
           </div>
           <div className="mt-6 text-[10px] text-slate-600">
-            {'// Scan complete. 6 categories verified. Production-grade toolset loaded.'}
+            {'// Scan complete. 8 categories verified. Production-grade toolset loaded.'}
           </div>
         </div>
       </div>
@@ -482,6 +484,16 @@ const projects = [
     tags: ['Java 21', 'Spring Boot 3.x', 'Python', 'ChromaDB', 'RAG', 'React', 'Tauri', 'MongoDB', 'Porcupine'],
     live: 'https://aria.shreyansh.dev',
     github: 'https://github.com/sshekhar-04/ARIA--Adaptive-Realtime-Intelligence-Agent.git',
+    classified: false,
+    notLive: true,
+  },
+  {
+    title: 'PharmaChain — Blockchain Medicine Authentication',
+    period: '2026', category: 'Blockchain / Hackathon Project',
+    desc: 'Hyperledger Fabric traceability system giving every medicine pack a cryptographically signed QR identity. Each handoff (Minted, In Transit, At Shop, Sold) is an immutable event across manufacturer, distributor, and regulator orgs. Java chaincode with single-use verification flags cloned QR re-scans as counterfeit instantly. Multi-org channel with Spring Boot microservice gateway exposing REST APIs, validated with Postman.',
+    tags: ['Hyperledger Fabric', 'Java', 'Spring Boot', 'REST APIs', 'Docker', 'QR Verification', 'Postman'],
+    live: '#',
+    github: 'https://github.com/sshekhar-04',
     classified: false,
     notLive: true,
   },
@@ -740,7 +752,7 @@ const Achievements = () => {
           </div>
 
           <div className="mt-5 pt-3 border-t border-[#00ff41]/10 flex flex-wrap items-center justify-between gap-2 text-[10px] text-slate-500 font-mono">
-            <div>{'// Sourced directly from Shreyansh_S_Dwivedi_Resume_v4.pdf'}</div>
+            <div>{'// Sourced directly from Shreyansh_Dwivedi_Resume_v5.pdf'}</div>
             <div className="text-[#00ff41]">VERIFIED HONORS & RESEARCH</div>
           </div>
         </div>
@@ -759,10 +771,10 @@ const experiencesData = [
     badge: 'INDUSTRY INTERNSHIP',
     location: 'Production Engineering',
     bullets: [
-      'Contributing to full-stack feature development and code quality initiatives as part of the engineering team.',
-      'Applying Java/Spring Boot and React expertise in a production environment.'
+      'Contributing to full-stack feature development and code quality initiatives as part of the engineering team, building and testing Java/Spring Boot REST APIs and React interfaces in a production environment.',
+      'Using Git, code reviews, and CI/CD pipelines to maintain production-grade code quality standards.'
     ],
-    tech: ['Java', 'Spring Boot', 'React', 'Production Engineering', 'Full-Stack']
+    tech: ['Java', 'Spring Boot', 'REST APIs', 'React', 'Git', 'CI/CD', 'JUnit', 'Postman']
   },
   {
     org: 'IIT Bhilai (Online Programs)',
